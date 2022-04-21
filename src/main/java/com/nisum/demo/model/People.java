@@ -1,24 +1,22 @@
 package com.nisum.demo.model;
 
 import lombok.AllArgsConstructor;
-import lombok.Value;
-import org.springframework.web.bind.WebDataBinder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
 
 import java.util.ArrayList;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @SuperBuilder
-public class Persona {
+public class People {
 
-    private String name;
-    private String lastname;
-    private String rut;
-    private ArrayList<Persona> Son;
+    protected String name;
+    protected String lastname;
+    protected String rut;
+    protected Integer age;
+    protected ArrayList<People> Son;
 
 }
