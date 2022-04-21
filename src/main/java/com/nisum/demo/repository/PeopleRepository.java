@@ -14,19 +14,20 @@ import java.util.List;
 
 public class PeopleRepository {
     public static People personasTogether() {
-        //List<People> allPeople = new ArrayList<>();
+        List<People> allPeople = new ArrayList<>();
 
         //PeopleRepository persona = new PeopleRepository();
 
         People persona = new People();
         persona.setName("Juana");
         persona.setLastname("lopez");
-        persona.setRut("165748202-3");
         persona.setAge(99);
+        persona.setRut("165748202-3");
         persona.setSon(null);
 
         //People fulano = People.builder().name("juana").lastname("martinez").rut("7896523654252").age(88).Son(null).build();
-        //allPeople.add(fulano);
+        allPeople.add(persona);
         return persona;
+
     }
 }

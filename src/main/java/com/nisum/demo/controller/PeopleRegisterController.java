@@ -14,11 +14,10 @@ import java.util.List;
 @RestController
 public class PeopleRegisterController {
     @GetMapping("/")
-    public static People getPeople(){
+    /*public static People getPeople(){
         People people = PeopleRegisterService.getPeople();
         return people;
-
-    }
+    }*/
 
     public static People peopleTogether(){
         People persona = PeopleRepository.personasTogether();
