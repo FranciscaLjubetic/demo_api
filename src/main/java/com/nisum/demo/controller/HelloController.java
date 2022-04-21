@@ -36,11 +36,6 @@ public class HelloController {
 
         ArrayList<Persona> Hijos = new ArrayList<>();
 
-//        Persona nieto11 = ;
-//        Persona nieto12 = ;
-//
-//        Persona nieto21 = ;
-//        Persona nieto22 = ;
 
 
         ArrayList<Persona> Nietos1 = new ArrayList<>();
@@ -52,8 +47,7 @@ public class HelloController {
 
         ArrayList<Persona> HijosdeBea = new ArrayList<>();
         HijosdeBea.add(j);
-//        Persona xxx = new Persona();
-//        xxx.setName("playboy");
+
 
         Persona.builder().name("julito").lastname("martinez").rut("7896523654252").build();
 
@@ -71,7 +65,7 @@ public class HelloController {
 
 
         p.setSon(Hijos);// a juan abuelo le pusimos hijos
-        e.setSon(Nietos1); // hijos para rosa
+        e.setSon(Nietos1); // hijos para rosa hija de juan
         f.setSon(HijosdeBea);
         x.setSon(Nietos2); // hijos para juan soto junior
 
