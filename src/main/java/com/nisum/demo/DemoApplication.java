@@ -1,11 +1,7 @@
 package com.nisum.demo;
 
-import lombok.Data;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import lombok.AllArgsConstructor;
-import com.nisum.demo.controller.HelloController;
-import lombok.NoArgsConstructor;
 
 //@Data
 //@NoArgsConstructor
