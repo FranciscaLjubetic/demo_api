@@ -11,23 +11,42 @@ import java.util.List;
 public class PeopleRegisterService {
 
     public static People getPeople() {
-        PeopleRepository repo = new PeopleRepository();
 
-//        //Padre
-        People p = new People();
-//        p.setName("juan");
-//        p.setLastname("soto");
-//        p.setAge(80);
-//        p.setRut("1365445-9");
+        ArrayList<People> allPeopleTogether = PeopleRepository.getRepository();
 
+        People p = allPeopleTogether.get(0);
 
-        System.out.println("Hola");
         return p;
     }
 
-    public void setSons(People dad, People son){
+    public static People getPeople(int index) {
+
+        ArrayList<People> allPeopleTogether = PeopleRepository.getRepository();
+
+        People p = allPeopleTogether.get(index);
+
+        return p;
+    }
+
+    public static ArrayList<People> queryPeopleByAge(int age, ArrayList<People> Persons) {
+
+        ArrayList<People> ageFullFillingPeople = new ArrayList<>();
+
+        for(People guy: Persons){
+            int years = guy.getAge();
+            if( years <= age) {
+                ageFullFillingPeople.add(guy);
+            }
+        }
+        return ageFullFillingPeople;
+    }
+
+    public static void setSons(People dad, People son, People son2){
+
         ArrayList<People> sonsList = new ArrayList<>();
+
         sonsList.add(son);
+        sonsList.add(son2);
         dad.setSon(sonsList);
     }
 }
