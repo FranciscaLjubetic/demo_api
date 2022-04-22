@@ -13,10 +13,10 @@ import java.util.ArrayList;
 @SuperBuilder
 public class People {
 
-    protected String name;
-    protected String lastname;
-    protected String rut;
-    protected Integer age;
-    protected ArrayList<People> Son;
+    private String name;
+    private String lastname;
+    private String rut;
+    private Integer age;
+    private ArrayList<People> Son;
 
 }
