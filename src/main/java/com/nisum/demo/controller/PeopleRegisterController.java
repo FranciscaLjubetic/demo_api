@@ -13,14 +13,17 @@ import java.util.List;
 //Rest Controller, para que lo tome como un controlador. Hay que inyectar la librería Started web.
 @RestController
 public class PeopleRegisterController {
-    @GetMapping("/")
-    /*public static People getPeople(){
-        People people = PeopleRegisterService.getPeople();
-        return people;
-    }*/
+//    @GetMapping("/")
+//    public static People getPeople(){
+//        People people = PeopleRegisterService.getPeople();
+//        System.out.println(people);
+//        return people ;
+//    }
 
-    public static People peopleTogether(){
-        People persona = PeopleRepository.personasTogether();
-        return persona;
+    @GetMapping("/test")
+    public static PeopleRepository getRepository(){
+        PeopleRepository repo = PeopleRepository.getRepository();
+        return repo;
     }
+
 }
