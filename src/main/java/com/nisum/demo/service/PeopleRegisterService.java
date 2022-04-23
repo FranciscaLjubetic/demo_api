@@ -2,10 +2,8 @@ package com.nisum.demo.service;
 
 import com.nisum.demo.model.People;
 import com.nisum.demo.repository.PeopleRepository;
-import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class PeopleRegisterService {
