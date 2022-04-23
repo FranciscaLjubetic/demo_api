@@ -14,18 +14,15 @@ public class PeopleRegisterService {
 
         ArrayList<People> allPeopleTogether = PeopleRepository.getRepository();
 
-        People p = allPeopleTogether.get(0);
-
-        return p;
+        return allPeopleTogether.get(0);
     }
 
     public static People getPeople(int index) {
 
         ArrayList<People> allPeopleTogether = PeopleRepository.getRepository();
 
-        People p = allPeopleTogether.get(index);
+        return allPeopleTogether.get(index);
 
-        return p;
     }
 
     public static ArrayList<People> queryPeopleByAge(int age, ArrayList<People> Persons) {
@@ -48,5 +45,24 @@ public class PeopleRegisterService {
         sonsList.add(son);
         sonsList.add(son2);
         dad.setSon(sonsList);
+    }
+
+    public static void setFamilyTree() {
+        People people = PeopleRegisterService.getPeople();
+
+        People h1 = PeopleRegisterService.getPeople(1);
+        People h2 = PeopleRegisterService.getPeople(2);
+
+        People h1h1 = PeopleRegisterService.getPeople(3);
+        People h1h2 = PeopleRegisterService.getPeople(4);
+
+        People h2h1 = PeopleRegisterService.getPeople(5);
+        People h2h2 = PeopleRegisterService.getPeople(6);
+
+        PeopleRegisterService.setSons(people, h1, h2);
+
+        PeopleRegisterService.setSons(h1, h1h1, h1h2);
+
+        PeopleRegisterService.setSons(h2, h2h1, h2h2);
     }
 }

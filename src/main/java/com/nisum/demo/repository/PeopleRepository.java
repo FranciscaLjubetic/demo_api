@@ -1,16 +1,15 @@
 package com.nisum.demo.repository;
 
 import com.nisum.demo.model.People;
+import com.nisum.demo.service.PeopleRegisterService;
 
 import java.util.ArrayList;
 
 public class PeopleRepository {
 
-    private static ArrayList<People> allPeople = new ArrayList<>();
+    private static final ArrayList<People> allPeople = new ArrayList<>();
 
     public static void setRepository() {
-
-        PeopleRepository repo = new PeopleRepository();
 
         People Rosa = new People("Rosa", "Martinez", "789652365425-2", 58,null);
 
