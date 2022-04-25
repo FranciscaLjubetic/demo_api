@@ -14,13 +14,14 @@ import java.util.List;
 @RestController
 public class PeopleRegisterController {
     @GetMapping("/")
-    /*public static People getPeople(){
-        People people = PeopleRegisterService.getPeople();
-        return people;
-    }*/
+    //probar usando una sola, en fila 27 voy directo al repositorio, en la 28 voy al service y el service va al repositorio
+    public static ArrayList<People> getPeople(){
+        return PeopleRepository.personasTogether();
+        //return PeopleRegisterService.getPeople();
+    }
 
-    public static People peopleTogether(){
-        People persona = PeopleRepository.personasTogether();
-        return persona;
+    @GetMapping("/query>18")
+    public static ArrayList<People> upEighteenAge() {
+        return PeopleRegisterService.upEighteenAge(18, PeopleRepository.personasTogether());
     }
 }

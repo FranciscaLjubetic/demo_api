@@ -1,23 +1,42 @@
 package com.nisum.demo.service;
 
 import com.nisum.demo.model.People;
+import com.nisum.demo.repository.PeopleRepository;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 public class PeopleRegisterService {
+    //Que me traiga el ArrayList desde repository.
+    public static ArrayList<People> upEighteenAge(int age, ArrayList<People> getPeople) {
+        ArrayList<People> adult = new ArrayList<>();
+        for (People upAge: getPeople ) {
+            int years = upAge.getAge();
+            if(years >= age){
+                adult.add(upAge);
+            }
+        }
+        return adult;
+    }
 
-    public static People getPeople() {
+
+    //lo puedo llamar directamente controlador -> repositorio, con esto lo estoy llamando dos veces. por service
+    // y en service, otra vez.
+    /*public static ArrayList<People> getPeople(){
+        return PeopleRepository.personasTogether();
+    }*/
+    //public static People getAllPeople() {
 
         //Padre
-        People p = new People();
+        /*People p = new People();
         p.setName("juan");
         p.setLastname("soto");
         p.setAge(80);
         p.setRut("1365445-9");
 
-        /*//Hijo, 2 hijos
+        //Hijo, 2 hijos
         People e = new People();
         e.setName("rosa");
         e.setLastname("rojas");
@@ -65,8 +84,8 @@ public class PeopleRegisterService {
         // opcion 3 de agregar a lista como nietos
         ArrayList<People> HijosdeBea = new ArrayList<>();
         HijosdeBea.add(j);
-//        Persona xxx = new Persona();
-//        xxx.setName("playboy");
+        Persona xxx = new Persona();
+        xxx.setName("playboy");
 
         ArrayList<People> Nietos2 = new ArrayList<>();
         Nietos2.add(new People("Javiera", "Morales", "46798-8", null));
@@ -76,8 +95,8 @@ public class PeopleRegisterService {
         f.setSon(HijosdeBea);
         x.setSon(Nietos2); // hijos para juan soto junior
 
-        System.out.println("esta es una persona " + p);*/
+        System.out.println("esta es una persona " + p);
 
-        return p;
-    }
+        return p;*/
+    //}
 }
