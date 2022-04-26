@@ -14,13 +14,6 @@ public class PeopleRegisterService{
         return PeopleRepository.getRepository();
     }
 
-    /*public static People getPeopleBythe() {
-        PeopleRepository.setRepository();
-        PeopleRepository.setFamilyTree();
-        ArrayList<People> allPeople = PeopleRepository.getRepository();
-        return allPeople.get(0);
-    }*/
-
     public static ArrayList<People> queryPeopleByAge() {
 
         ArrayList<People> ageFullFillingPeople = new ArrayList<>();
